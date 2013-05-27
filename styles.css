@@ -1,0 +1,89 @@
+
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family:Open Sans, Verdana, garamond;
+	font-size:large;
+	font-style: normal;
+	font-variant: normal;
+	color: #34495e;
+}
+
+.navBar {
+	width:100%;
+	background-color: rgb(41, 128, 185);
+	height:60px;
+}
+
+.simTopWrapper {
+	width: 100%;
+}
+
+.simLink {
+	display: inline-block;
+	float: right;
+}
+
+
+
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:none;}
+a:active {text-decoration:none;}
+
+a:link {color:#3498DB;}      /* unvisited link */
+a:visited {color:#3498DB;}  /* visited link */
+a:hover {color:#1ABC9C;}  /* mouse over link */
+a:active {color:#1ABC9C;}  /* selected link */
+
+.simTitle {
+	font-size: x-large;
+	display: inline-block;
+}
+
+.simDescription {
+	margin-left: 15px;
+}
+
+.title {
+	font-size: xx-large;
+	margin-left: 3%;
+	color: #ECF0F1;
+	display: inline-block;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.contentWrapper {
+	top: 50px;
+	margin-left:auto;
+	margin-right:auto;
+	width:600px;
+	height: 100%;
+	font-weight: 100;
+	line-height: 1.831;
+}
+
+.headerSpacer {
+	height: 35px;
+	width: 100%;
+}
+
+ul.menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0; 
+	position: absolute;
+	left: 30%;
+	display: inline-block;
+}
+
+.menu a {
+	display: block;
+	width: 60px;
+	font-size: x-large;
+}
+
+.menu li {
+	float: left;
+}
