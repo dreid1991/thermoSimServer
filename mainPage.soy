@@ -3,58 +3,62 @@
 /**
  *header
  */
-<html>
-<body>
-<link type='text/css' href = 'styles.css' rel='stylesheet'/>
-<div class='navBar'>
-	<div class='title'>
-		thermoSim
+{template .top}
+	<html>
+	<body>
+	<link type='text/css' href = 'styles.css' rel='stylesheet'/>
+	<div class='navBar'>
+		<div class='title'>
+			thermoSim
+		</div>
 	</div>
-</div>
-<!-- 	<ul class='menu'>
-		<li>
-			<a href='sadf'>hello</a>
-		</li>
-		<li>
-			<a href='sadf'>hello2</a>
-		</li>
-	</ul>
- -->
-<div class='headerSpacer'></div>
-<div class='contentWrapper'>
-	<p>
-		Check out the simulations below.  The first three are finished simulations complete with instructional design.  
-		The last four demo some of the simulation platform's capabilities.  
-		The source code is availible <a href = 'https://github.com/dreid1991/thermoSim'>here</a> under the GNU Affero license.
-	</p>
-	<hr>
-	
+	<!-- 	<ul class='menu'>
+			<li>
+				<a href='sadf'>hello</a>
+			</li>
+			<li>
+				<a href='sadf'>hello2</a>
+			</li>
+		</ul>
+	 -->
+	<div class='headerSpacer'></div>
+	<div class='contentWrapper'>
+		<p>
+			Check out the simulations below.  The first three are finished simulations complete with instructional design.  
+			The last four demo some of the simulation platform's capabilities.  
+			The source code is availible <a href = 'https://github.com/dreid1991/thermoSim'>here</a> under the GNU Affero license.
+		</p>
+		<hr>
+{/template}
+
 /**
  *Greets all the people
  *@param simulations list of simulation references. 
  */	
-	{foreach $simulation in $simulations}
-		<div class='simTopWrapper'>
-			<div class='simTitle'>
-				{$simulation.title}
+{template .simLinks autoescape="false"}
+		{foreach $simulation in $simulations}
+			<div class='simRefWrapper'>
+				<div class='simTopWrapper'>
+					<div class='simTitle'>
+						{$simulation.title}
+					</div>
+				<div class='simLink'>
+					<a href='thermoSim/levels/{$simulation.fileName}'>View simulation</a>
+				</div>
+				</div>
+				<div class='simDescription'>
+						{$simulation.description}
+				</div>
 			</div>
-		<div class='simLink'>
-			<a href='thermoSim/levels/{$simulation.fileName}.html'>View simulation</a>
-		</div>
-		</div>
-		<div class='simDescription'>
-			<p>
-				{$simulation.description}
-			</p>
-		</div>
-	{ifempty}
-		There are no simulations.  Something is probably wrong. 
-	{/foreach}
+		{ifempty}
+			There are no simulations.  Something is probably wrong. 
+		{/foreach}
 
-</div>
+	</div>
 
 	
 
-<br>
+
 </body>
 </html>
+{/template}

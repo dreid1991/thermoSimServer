@@ -3,10 +3,11 @@ var crypto = require('crypto');
 var fs = require('fs');
 var url = require('url');
 var thermoSimPath = 'thermoSim/'
+
 var hits = 0;
 var allSimulations = [
 	new SimulationReference('rev', 'Reversibility', 'Alec.html', 'A simulation on reversibility'),
-	new SimulationReference('rev', 'c<sub>V</sub> vs. c<sub>P</sub>', 'Matt2.html', 'A simulation on the distincion between c<sub>V</sub> and c<sub>P</sub>.'),
+	new SimulationReference('rev', 'c\<sub\>v</sub>woo vs. c<sub>P</sub>', 'Matt2.html', 'A simulation on the distincion between c<sub>V</sub> and c<sub>P</sub>.'),
 	new SimulationReference('rev', 'Work', 'levelTemplateCole.html', 'A simulation exploring the molecular origin of work'),
 	new SimulationReference('rev', 'Activation energy', 'activationPair.html', 'A simulation demoing activation energy functionality'),
 	new SimulationReference('rev', 'Single-component phase equilibrium', 'phaseEquilOneCompEx.html', 'A simulation demoing single-component liquid-vapor equilibrium'),
@@ -74,15 +75,9 @@ function getExt(pathname) {
 function thermoSimMain(req, res, urlParse, sims) {
 	hits++;
 	console.log(hits + ' hits');
-	var str = "";
-	str += "<link type='text/css' href = 'mainStyles.css' rel='stylesheet'/>"
-	str += "<div style='width:500px;'>Check out the simulations below.  The first three are finished simulations complete with instructional design.  The last four demo some of the things the simulation can do.  The source code is availible <a href = 'https://github.com/dreid1991/thermoSim'>here</a> under the GNU Affero license.</div>"
-
-	str += "<p>Simulations:</p>";
-	for (var simIdx=0; simIdx<sims.length; simIdx++) {
-		var sim = sims[simIdx];
-		str += '<a href = "' + thermoSimPath + 'levels/' + sim.fileName + '">' + sim.title + '</a>: ' + sim.description + '<br>';
-	}
+	var str = mainPage.top() + mainPage.simLinks({simulations:sims});
+	
+	
 	res.writeHead(200, {'Content-Type': 'text/html'});
 	res.end(str);
 	// db.all("SELECT dir, title, fileName FROM sims", function(error, rows) {

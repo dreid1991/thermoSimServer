@@ -43,6 +43,13 @@ a:active {color:#1ABC9C;}  /* selected link */
 
 .simDescription {
 	margin-left: 15px;
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.simRefWrapper {
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
 .title {
