@@ -7,7 +7,7 @@ var thermoSimPath = 'thermoSim/'
 var hits = 0;
 var allSimulations = [
 	new SimulationReference('rev', 'Reversibility', 'Alec.html', 'A simulation on reversibility'),
-	new SimulationReference('rev', 'c\<sub\>v</sub>woo vs. c<sub>P</sub>', 'Matt2.html', 'A simulation on the distincion between c<sub>V</sub> and c<sub>P</sub>.'),
+	new SimulationReference('rev', 'c\<sub\>v</sub> vs. c<sub>p</sub>', 'Matt2.html', 'A simulation on the distincion between constant volume and constant pressure heat capacity'),
 	new SimulationReference('rev', 'Work', 'levelTemplateCole.html', 'A simulation exploring the molecular origin of work'),
 	new SimulationReference('rev', 'Activation energy', 'activationPair.html', 'A simulation demoing activation energy functionality'),
 	new SimulationReference('rev', 'Single-component phase equilibrium', 'phaseEquilOneCompEx.html', 'A simulation demoing single-component liquid-vapor equilibrium'),
