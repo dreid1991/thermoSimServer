@@ -1,6 +1,6 @@
 
 LevelData = {
-	levelTitle: 'Two Component Phase Equilibrium',
+	levelTitle: 'Cell demo',
 
 	spcDefs: [
 		//add antoine coefs, cvLiq, hvap
@@ -172,8 +172,8 @@ LevelData = {
 							// {wallInfo: "wally", data:'temp', readout: 'mainReadout'}
 						// ]
 					},
-					title: 'The Fellowship of the Ring',
-					text: 'When Mr. Bilbo Baggins of Bag End announced that he would shortly be celebrating his eleventy-first birthday with a party of special magnificence, there was much talk and excitement in Hobbiton. Bilbo was very rich and very peculiar, and had been the wonder of the Shire for sixty years, ever since his remarkable disappearance and unexpected return',
+					title:'',
+					text: '',
 				}
 			]
 		}
