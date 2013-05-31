@@ -3,7 +3,7 @@ var crypto = require('crypto');
 var fs = require('fs');
 var url = require('url');
 var thermoSimPath = 'thermoSim/'
-
+//this is a trivial change to make sure git is working on the raspberry pi
 var hits = 0;
 var allSimulations = [
 	new SimulationReference('rev', 'Reversibility', 'Alec.html', 'A simulation on reversibility'),
